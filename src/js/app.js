@@ -28,12 +28,6 @@ DbService.getAllTodos().then((todos) => {
 function render() {
   
   
-
-  
-
-
-
-
   const snippetContent = document.getElementById("snippetContent");
   const divZero = document.createElement('div')
    
@@ -59,10 +53,10 @@ function render() {
   for (let i = 0; i < manager.todoArray.length; i++) {
     const todo = manager.todoArray[i];
 
-    const headerH4 = document.createElement("h4");
-    const nodeH4 = document.createTextNode("To Do");
-    headerH4.appendChild(nodeH4);
-    headerH4.classList.add('title')
+    // const headerH4 = document.createElement("h4");
+    // const nodeH4 = document.createTextNode("To Do");
+    // headerH4.appendChild(nodeH4);
+    // headerH4.classList.add('title')
     
 
     const div1 = document.createElement('div')
@@ -102,11 +96,11 @@ function render() {
     div4.appendChild(dateH6);
     
     //Title 
-    const titleH4 = document.createElement("p");
+    const titleH4 = document.createElement("h4");
     const titleNode = document.createTextNode(todo.title);
     titleH4.appendChild(titleNode);
-    titleH4.classList.add('description')
-    div4.appendChild(headerH4);
+    titleH4.classList.add('title')
+    // div4.appendChild(headerH4);
     div4.appendChild(titleH4);
 
 
@@ -128,6 +122,7 @@ function render() {
 
         completeBtn.classList.add('btn')
         completeBtn.classList.add('btn-light')
+        completeBtn.classList.add('btn-compl')
 
     completeBtn.addEventListener("click", () => {
       const modifiedTodo = { ...todo };
@@ -165,6 +160,7 @@ function render() {
     div4.appendChild(deleteBtn);
     deleteBtn.classList.add("btn");
     deleteBtn.classList.add("btn-light");
+    deleteBtn.classList.add('btn-compl')
 
     deleteBtn.addEventListener("click", () => {
       DbService.deleteTodo(todo.id).then(() => {
