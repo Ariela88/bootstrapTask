@@ -17,6 +17,10 @@ export class Todo {
     
             return todo.creationDate.getTime() - this.creationDate.getTime()
         }
+        compareByChecked(todo) {
+            
+            return todo.isCompleted - this.isCompleted
+        }
 }
 
 

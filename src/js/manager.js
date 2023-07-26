@@ -33,11 +33,19 @@ export class Manager {
 
     ordertodosByDate() {
 
-
         this.todoArray.sort((todo1, todo2) => todo1.compareByDate(todo2))
 
 
     }
+
+    ordertodosByChecked() {
+
+        this.todoArray.sort((todo1, todo2) => todo1.compareByChecked(todo2))
+
+
+    }
+
+
 
     changeCompleteStatus(index) {
         const todo = this.todoArray[index]
