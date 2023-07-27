@@ -1,6 +1,8 @@
 import { Todo } from "./todo";
 import { DbService } from "./service";
 import { Manager } from "./manager";
+import confetti from "canvas-confetti";
+
 
 function addEventToButtons(){
   const sortTitleBtn = document.getElementById('sort-button-title')
@@ -125,7 +127,21 @@ function render() {
         completeBtn.classList.add('btn-compl')
 
     completeBtn.addEventListener("click", () => {
+
+      if(!todo.isCompleted){
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+
+      }
+      
+      
+
+      
       const modifiedTodo = { ...todo };
+      
 
       modifiedTodo.isCompleted = !modifiedTodo.isCompleted;
       
@@ -137,9 +153,11 @@ function render() {
     });
 
     if (todo.isCompleted) {
-
-      // div.classList.add('todo-completed');
-      div3.style.backgroundColor = '#7aba3ee1';
+     
+   
+      //div.classList.add('todo-completed');
+     div3.style.backgroundColor = '#bde4a8cc'
+      ;
 
      
   }
@@ -163,6 +181,8 @@ function render() {
     deleteBtn.classList.add('btn-compl')
 
     deleteBtn.addEventListener("click", () => {
+     
+
       DbService.deleteTodo(todo.id).then(() => {
         manager.deleteTodo(i);
 

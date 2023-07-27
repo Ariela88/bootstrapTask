@@ -1,6 +1,9 @@
 const path = require('path')
 
 export default {
+  build: {
+    outDir:'../dist'
+  },
   root: path.resolve(__dirname, 'src'),
   resolve: {
     alias: {

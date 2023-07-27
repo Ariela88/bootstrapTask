@@ -1,14 +1,36 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&family=Ubuntu:wght@400;500&display=swap');
 body {
-    margin-top: 20px;
+    
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+}
+h4{
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: capitalize;
+    font-size: 40px;
 }
 
-nav {
+nav{
+    margin-top: 0px !important;
+}
+.navCustomize {
+    background-color: #885A89 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+
+}
+.navCustomize button{
+    font-size: 28px;
+    color: white;
+   
 }
 
 .card-big-shadow {
@@ -26,22 +48,29 @@ nav {
 
 .card {
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-    background: #b8d8d8;
+    box-shadow: 0 10px 10px rgba(204, 197, 185, 0.5);
+    background: #79b4a9a7;
     color: #252422;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    border: none;
 }
+
+
 
 .btn-compl {
     margin: 20px;
+  
 }
 
 .btn-add {
     position: sticky;
     bottom: 0;
     left: 20px;
+    color: #252422;
+    background: transparent;
+    border: none;
 
 
     font-size: 80px;
@@ -57,9 +86,9 @@ nav {
 }
 
 h1 {
-    margin: auto;
+    margin: 40px auto;
     font-size: 120px;
-    font-family: 'Abril Fatface';
+    font-family: 'Abril Fatface' !important;
 }
 
 
@@ -89,6 +118,9 @@ h1 {
 
 .card .content {
     padding: 20px 20px 10px 20px;
+    border: none;
+   
+
 
 }
 
@@ -119,10 +151,10 @@ h1 {
 
 h4,
 .h4 {
-    font-size: 1.5em;
-    font-weight: 600;
+    
     line-height: 1.2em;
     margin-top: 20px;
+    
 }
 
 h6,
@@ -141,10 +173,15 @@ h6,
     margin-top: 30px;
 }
 
-a:hover,
-a:focus {
+
+
+button:hover,
+button:focus {
     text-decoration: none;
-    color: #252422;
+    background-color: #885A89 !important;
+   
+    color: #ffffff;
+   
 }
 
 /*======== COLORS ===========*/
