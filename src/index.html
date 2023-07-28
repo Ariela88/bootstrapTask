@@ -41,12 +41,11 @@
             
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Aggiungi un elemento alla lista: </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -55,8 +54,8 @@
 
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="add-to-do" type="button" class="btn btn-primary">Save changes</button>
+                    <button id="close-button" type="button" class="btn btn-secondary dialog-btn" data-bs-dismiss="modal">Close</button>
+                    <button id="add-to-do" type="button" class="btn btn-primary dialog-btn">Save changes</button>
                   </div>
                 </div>
               </div>
@@ -68,7 +67,8 @@
       </div>
     </div>
   </nav>
-
+  
+  
   <div class="header"> 
     <h1> To Do List</h1>
   </div>
@@ -86,9 +86,11 @@
 
       </div> -->
     </div>
-    <button type="button" class="btn btn-light btn-compl btn-add" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      ➕
-    </button>
+
+    <button type="button" class="btn btn-light btn-primary btn-compl btn-add" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <img class="img-plus" src="./plus.png">
+     </button>
+  
     
 
 
